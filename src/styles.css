@@ -1,0 +1,75 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    display:flex;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensure items are centered vertically */
+    background-color: grey;
+    padding: 10px; /* Add some padding for better spacing */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; /* Add space between the links */
+    align-items: center; /* Center the links vertically */
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    color: white;
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white; /* Adjust the color as needed */
+    transition: width 0.3s ease; /* Smooth transition for the underline */
+    position: absolute;
+    bottom: -5px; /* Position the underline just below the text */
+    left: 50%;
+    transform: translateX(-50%); /* Center the underline */
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Expand the underline to full width on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkslategray;
+    padding: 10px;
+    margin-top:auto;
+}
