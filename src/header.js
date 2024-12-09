@@ -1,6 +1,5 @@
 
 
-
 export default function Header() 
 {
     const headerCont= document.querySelector('header');
@@ -26,25 +25,29 @@ function createNav(navCont)
 
     // create a list that stores navigation links
     const nav = document.createElement('ul');
-
+    nav.classList.add('nav-links');
     //list item for the home page
-    const home = document.createElement('li');
+    const home = document.createElement('a');
+    home.href= 'https://www.linkedin.com/in/dnguyen0091/';
     home.textContent = 'Home';
     nav.appendChild(home);
 
     //list item for the about page
-    const about = document.createElement('li');
+    const about = document.createElement('a');
+    about.href= 'https://www.linkedin.com/in/dnguyen0091/';
     about.textContent = 'About';
     nav.appendChild(about);
 
 
     //list item for the portfolio page
-    const portfolio = document.createElement('li');
+    const portfolio = document.createElement('a');
+    portfolio.href= 'https://www.linkedin.com/in/dnguyen0091/';
     portfolio.textContent = 'Portfolio';
     nav.appendChild(portfolio);
 
     //list item for the contact page
-    const contact = document.createElement('li');
+    const contact = document.createElement('a');
+    contact.href= 'https://www.linkedin.com/in/dnguyen0091/';
     contact.textContent = 'Contact';
     nav.appendChild(contact);
 
