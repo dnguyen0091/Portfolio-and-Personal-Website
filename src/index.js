@@ -1,8 +1,9 @@
 // import React from 'react';
 // import ReactDOM from 'react-dom';
 // import App from './App';
+import Body from './body';
 import Footer from './footer';
-import Header from './Header';
+import Header from './header';
 import './styles.css'; // Import the CSS file
 
 // ReactDOM.render(
@@ -16,9 +17,10 @@ import './styles.css'; // Import the CSS file
 
 function main()
 {
-    //call creates the header
-    Header();
-    Footer();
+    
+    Header();//call creates the header
+    Body(); //call creates the body
+    Footer(); //call creates the footer
 
 
     
