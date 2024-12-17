@@ -1,14 +1,15 @@
 
 
+
 export default function Header() 
 {
     const headerCont= document.querySelector('header');
 
-    // create a logo for the header
-    const logo = document.createElement('img');
-    logo.src = 'https://via.placeholder.com/150';
-    logo.alt = 'Logo';
-    headerCont.appendChild(logo);
+    // // create a logo for the header
+    // const logo = document.createElement('img');
+    // logo.src = 'https://via.placeholder.com/150';
+    // logo.alt = 'Logo';
+    // headerCont.appendChild(logo);
 
     // create a navigation container
     const navCont = document.createElement('nav');
@@ -28,14 +29,35 @@ function createNav(navCont)
     nav.classList.add('nav-links');
     //list item for the home page
     const home = document.createElement('a');
-    home.href= 'https://www.linkedin.com/in/dnguyen0091/';
+    
     home.textContent = 'Home';
+    home.href = '#'; // Add href to make it look like a link
+
+    home.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default anchor behavior
+        const targetElement = document.getElementById('root'); // Use ID instead of class
+        if (targetElement) {
+            targetElement.scrollIntoView({ 
+                behavior: 'smooth'
+            });
+        }
+    });
     nav.appendChild(home);
 
     //list item for the about page
     const about = document.createElement('a');
-    about.href= 'https://www.linkedin.com/in/dnguyen0091/';
+    about.href= '#';
     about.textContent = 'About';
+    
+    // about.addEventListener('click', (e) => {
+    //     e.preventDefault(); // Prevent default anchor behavior
+    //     const targetElement = document.getElementById('main-content'); // Use ID instead of class
+    //     if (targetElement) {
+    //         targetElement.scrollIntoView({ 
+    //             behavior: 'smooth'
+    //         });
+    //     }
+    // });
     nav.appendChild(about);
 
 
