@@ -1,5 +1,3 @@
-
-
 export default function contact()
 {
     const bodyCont = document.querySelector('.body');
@@ -49,53 +47,53 @@ export default function contact()
 
 
     //Submit Button
-    const submit = document.createElement('input');
-    submit.type = 'submit';
-    submit.value = 'Submit';
+    const submit = document.createElement('button');
+    submit.id= 'submit';
+    submit.textContent = 'Submit';
     contactFormCont.appendChild(submit);
+    
     
 
 
     // Contact Info
     const contactInfoCont = document.createElement('div');
     contactInfoCont.id = 'contact-info';
-    //Email
-    const email= document.createElement('div');
-    const emailIcon= document.createElement('img');
-    emailIcon.src= 'assets/email.png';
-    emailIcon.alt= 'Email';
-    const emailText= document.createElement('a');
-    emailText.textContent= 'davidnguyen0091@icloud.com';
+
+
+   // Email
+    const email = document.createElement('div');
+    const emailIcon = document.createElement('img');
+    emailIcon.src = './assets/email.svg';
+    emailIcon.alt = 'Email';
+    const emailText = document.createElement('a');
+    emailText.href = 'mailto:davidnguyen0091@icloud.com'; // Make it a mailto link
+    emailText.textContent = 'davidnguyen0091@icloud.com';
 
     email.appendChild(emailIcon);
     email.appendChild(emailText);
     contactInfoCont.appendChild(email);
 
-
-
-    //GitHub
-    const github= document.createElement('div');
-    const githubIcon= document.createElement('img');
-    githubIcon.src= 'assets/github.png';
-    githubIcon.alt= 'Github Icon';
-    const githubText= document.createElement('a');
-    githubText.href= 'https://github.com/dnguyen0091';
-    githubText.textContent= 'dnguyen0091';
+    // GitHub
+    const github = document.createElement('div');
+    const githubIcon = document.createElement('img');
+    githubIcon.src = './assets/github.png';
+    githubIcon.alt = 'Github Icon';
+    const githubText = document.createElement('a');
+    githubText.href = 'https://github.com/dnguyen0091';
+    githubText.textContent = 'dnguyen0091';
 
     github.appendChild(githubIcon);
     github.appendChild(githubText);
     contactInfoCont.appendChild(github);
 
-
-
-    //LinkedIn
-    const linkedin= document.createElement('div');
-    const linkedinIcon= document.createElement('img');
-    linkedinIcon.src= 'assets/linkedin.png';
-    linkedinIcon.alt= 'LinkedIn';
-    const linkedinText= document.createElement('a');
-    linkedinText.href= 'https://www.linkedin.com/in/dnguyen0091/';
-    linkedinText.textContent= 'dnguyen0091';
+    // LinkedIn
+    const linkedin = document.createElement('div');
+    const linkedinIcon = document.createElement('img');
+    linkedinIcon.src = './assets/linkedIn.svg';
+    linkedinIcon.alt = 'LinkedIn';
+    const linkedinText = document.createElement('a');
+    linkedinText.href = 'https://www.linkedin.com/in/dnguyen0091';
+    linkedinText.textContent = 'David Nguyen';
 
     linkedin.appendChild(linkedinIcon);
     linkedin.appendChild(linkedinText);
@@ -106,7 +104,7 @@ export default function contact()
     //Phone
     const phone= document.createElement('div');
     const phoneIcon= document.createElement('img');
-    phoneIcon.src= 'assets/phone.png';
+    phoneIcon.src= './assets/phone.svg';
     phoneIcon.alt= 'Phone';
     const phoneText= document.createElement('a');
     phoneText.textContent= '904-844-1920';
@@ -124,3 +122,4 @@ export default function contact()
     bodyCont.appendChild(mainCont);
 
 }
+
