@@ -1,3 +1,28 @@
+:root
+{
+    /* Background Colors */
+    --background-primary: #1E1E1E; /* Main background */
+    --background-secondary: #2C2C2C; /* Chat bubbles, cards, etc. */
+  
+    /* Text Colors */
+    --text-primary: #EAEAEA; /* Main text */
+    --text-secondary: #B0B0B0; /* Secondary text, timestamps */
+  
+    /* Accent Colors */
+    --accent-link: #10A7E2; /* Links and interactive elements */
+    --accent-highlight: #19C37D; /* Buttons or highlighted states */
+  
+    /* Borders and Shadows */
+    --border-color: #3A3A3A; /* Element outlines or separators */
+
+    --input-background: #2C2C2C;
+    --input-border: #3A3A3A;
+    --input-border-focus: #10A7E2;
+    --input-text: #EAEAEA;
+    --input-placeholder: #B0B0B0;
+}
+
+
 html, body {
     height: 100%;
     margin: 0;
@@ -10,34 +35,18 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    background-color: var(--background-secondary);
 }
 
-
-
-/*--------------------------- HEADER ------------------------------------------*/
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Ensure items are centered vertically */
-    background-color: grey;
-    padding: 10px; /* Add some padding for better spacing */
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px; /* Add space between the links */
-    align-items: center; /* Center the links vertically */
-}
-
-.nav-links a {
+a {
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
     position: relative;
-    color: white;
+    color: var(--text-primary);
 }
 
-.nav-links a::after {
+a::after {
     content: '';
     display: block;
     width: 0;
@@ -50,8 +59,22 @@ body{
     transform: translateX(-50%); /* Center the underline */
 }
 
-.nav-links a:hover::after {
+a:hover::after {
     width: 100%; /* Expand the underline to full width on hover */
+}
+/*--------------------------- HEADER ------------------------------------------*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensure items are centered vertically */
+    background-color: var(--background-primary);
+    padding: 10px; /* Add some padding for better spacing */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; /* Add space between the links */
+    align-items: center; /* Center the links vertically */
 }
 
 
@@ -107,39 +130,88 @@ body{
 
 /* -----------------------------------BODY-CONTACT ----------------------------*/
 
-#main-content-contact
-{
+#main-content-contact {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    color: var(--text-primary);
     gap: 5vh;
 }
 
-#contact-container
-{
-    display:flex;
-    flex-direction:row;
+#contact-container {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap:10vw;
+    gap: 25vw;
 }
 
-#contact-form
-{
-    display:flex;
+#contact-container img {
+    width: 5vw;
+}
 
+#contact-form {
+    display: flex;
     flex-direction: column;
-
     gap: 2vh;
+    width: 100%; /* Ensure the form takes up the full width of its container */
+    max-width: 500px; /* Set a maximum width for the form */
 }
 
-#contact-info
-{
+#contact-info {
     gap: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+#contact-info div {
+    display: flex;
+    align-items: center; /* Center the image and text vertically */
+    gap: 10px; /* Add some space between the image and the text */
+}
 
+#contact-info img {
+    width: auto;
+    height: 5vh;
+}
+
+#contact-info div {
+    width: 100%; /* Ensure each contact item takes up the full width */
+    max-width: 300px; /* Set a maximum width for consistency */
+}
+
+input, textarea {
+    background-color: var(--input-background);
+    color: var(--input-text);
+    border: 1px solid var(--input-border);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    width: 100%; /* Ensure inputs take up the full width of the form */
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--input-placeholder);
+}
+
+input:focus, textarea:focus {
+    border-color: var(--input-border-focus);
+}
+
+#submit {
+    background-color: var(--accent-highlight);
+    color: var(--text-primary);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%; /* Ensure the button takes up the full width of the form */
+    font-size: 1rem;
+    cursor: pointer;
+}
 /* ----------------------------------------------------------------------------- */
 
 
@@ -153,9 +225,18 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: darkslategray;
+    background-color: var(--background-primary);
+    color: var(--text-primary);
     padding: 10px;
+    height : 5vh;
     margin-top:auto;
+    gap: 2vw;
 }
 
-/* ------------------------------------------------------------------------------ */
+.footer img
+{
+    width: auto;
+    height: 5vh;
+}
+
+/* ------------------------------------------------------------------------------ */----------------------------------------- */
