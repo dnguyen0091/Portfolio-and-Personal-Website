@@ -1,9 +1,12 @@
 // import React from 'react';
 // import ReactDOM from 'react-dom';
 // import App from './App';
-import Body from './body';
+import about from './about';
+import contact from './contact';
 import Footer from './footer';
 import Header from './header';
+import intro from './intro';
+
 import './styles.css'; // Import the CSS file
 
 // ReactDOM.render(
@@ -17,9 +20,10 @@ import './styles.css'; // Import the CSS file
 
 function main()
 {
-    
+    intro(); //call creates the intro
     Header();//call creates the header
-    Body(); //call creates the body
+    about(); //call creates the body
+    contact(); //call creates the contact
     Footer(); //call creates the footer
 
 
