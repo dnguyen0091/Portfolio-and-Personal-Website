@@ -27,7 +27,7 @@ html, body {
     display: flex;
     flex-direction: column;
     overflow-y: auto; /* Enable scrolling */
-    background-color: var(--background-secondary);
+    background-color: var(--background-primary);
 }
 
 #root {
@@ -79,7 +79,7 @@ a:hover::after {
 
 #viewWorkButton
 {
-    background-color: var(--background-secondary);
+    background-color: var(--background-primary);
     color: var(--accent-highlight);
     border-color: var(--accent-highlight);
     padding: 1rem;
@@ -106,7 +106,7 @@ a:hover::after {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: var(--background-primary);
+    background-color: var(--background-secondary);
     padding: 10px 20px;
     box-sizing: border-box;
 }
@@ -192,7 +192,7 @@ a:hover::after {
     justify-content: flex-start;
     align-items: center;
     color: var(--text-primary);
-    gap: 5vh;
+    padding: 5vh;
 }
 
 #contact-container {
@@ -200,43 +200,31 @@ a:hover::after {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 25vw;
+    gap: 15vw;
 }
 
-#contact-container img {
-    width: 5vw;
-}
+
 
 #contact-form {
     display: flex;
     flex-direction: column;
     gap: 2vh;
     width: 100%; /* Ensure the form takes up the full width of its container */
-    max-width: 500px; /* Set a maximum width for the form */
+    
 }
 
-#contact-info {
-    gap: 2vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-#contact-info div {
-    display: flex;
-    align-items: center; /* Center the image and text vertically */
-    gap: 10px; /* Add some space between the image and the text */
-}
-
-#contact-info img {
-    width: auto;
-    height: 5vh;
-}
-
-#contact-info div {
-    width: 100%; /* Ensure each contact item takes up the full width */
-    max-width: 300px; /* Set a maximum width for consistency */
+textarea {
+    resize: none; /* Prevent user resizing */
+    width: 100%; /* Match width of other form elements */
+    height: 150px; /* Fixed height */
+    background-color: var(--input-background);
+    color: var(--input-text);
+    border: 1px solid var(--input-border);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
 }
 
 input, textarea {
@@ -275,9 +263,15 @@ input:focus, textarea:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--background-primary);
+
+
+    background-color: var(--background-secondary);
     color: var(--text-primary);
-    padding: 10px;
+
+
+    padding: 10;
+    min-height:5vh;
+
     height: 5vh;
     margin-top: auto;
     gap: 2vw;
