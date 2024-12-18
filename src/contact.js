@@ -8,11 +8,6 @@ export default function contact()
     mainCont.id = 'main-content-contact';
     
 
-    //Header
-    const header = document.createElement('h1');
-    header.textContent = 'Contact';
-    mainCont.appendChild(header);
-
     const p= document.createElement('p');
     p.textContent="Have a question or want to work together? Leave your details and I'll get back to you as soon as possible.";
     mainCont.appendChild(p);
@@ -64,6 +59,7 @@ export default function contact()
     bodyCont.appendChild(mainCont);
 
 }
+
 
 
 
