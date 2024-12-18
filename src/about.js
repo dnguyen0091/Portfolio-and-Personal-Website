@@ -25,46 +25,25 @@ export default function about()
     const languages = document.createElement('div');
     languages.id = 'languages';
 
-    const html = document.createElement('img');
-    html.src='assets/html.svg';
-    html.alt='HTML';
-    languages.appendChild(html);
+    // Array of language objects
+    const languageIcons = [
+        { src: 'assets/js.svg', alt: 'JavaScript' },
+        { src: 'assets/react.svg', alt: 'React' },
+        { src: 'assets/python.svg', alt: 'Python' },
+        { src: 'assets/java.svg', alt: 'Java' },
+        { src: 'assets/css.svg', alt: 'CSS' },
+        { src: 'assets/c.svg', alt: 'C' },
+        { src: 'assets/pytorch.svg', alt: 'PyTorch' }
+    ];
 
-    const css = document.createElement('img');
-    css.src='assets/css.svg';
-    css.alt='CSS';
-    languages.appendChild(css);
+    // Create and append icons
+    languageIcons.forEach(({ src, alt }) => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = alt;
+        languages.appendChild(img);
+    });
 
-    const js = document.createElement('img');
-    js.src='assets/js.svg';
-    js.alt='JavaScript';
-    languages.appendChild(js);
-
-    const react = document.createElement('img');
-    react.src='assets/react.svg';
-    react.alt='React';
-    languages.appendChild(react);
-
-    const java = document.createElement('img');
-    java.src='assets/java.svg';
-    java.alt='Java';
-    languages.appendChild(java);
-
-    const python = document.createElement('img');
-    python.src='assets/python.svg';
-    python.alt='Python';
-    languages.appendChild(python);
-
-    const c = document.createElement('img');
-    c.src='assets/c.svg';
-    c.alt='C';
-    languages.appendChild(c);
-    
-    const pytorch = document.createElement('img');
-
-
-    
-    
     bodyCont.appendChild(mainCont);
     bodyCont.appendChild(languages);
 }
