@@ -263,21 +263,38 @@ input:focus, textarea:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-direction: column;
 
     background-color: var(--background-secondary);
     color: var(--text-primary);
 
-
-    padding: 10;
-    min-height:5vh;
-
-    height: 5vh;
+    min-height:10vh;
     margin-top: auto;
-    gap: 2vw;
+    
 }
 
-.footer img {
-    width: auto;
-    height: 5vh;
+#contact-info-footer img {
+    width: 2rem;
+    height: auto;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+#contact-info-footer a {
+    transition: all 0.3s ease;
+}
+
+#contact-info-footer a:hover {
+    transform: translateY(-5px);
+}
+
+#contact-info-footer a:hover img {
+    filter: drop-shadow(0 0 10px var(--accent-highlight));
+    transform: scale(1.1);
+}
+
+#contact-info-footer {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
 }
