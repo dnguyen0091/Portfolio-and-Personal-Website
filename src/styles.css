@@ -153,9 +153,34 @@ a:hover::after {
     color: var(--text-primary);
 }
 
-#languages img
-{
+#languages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 800px;
+    justify-items: center;
+    transform: rotate(30deg);
+}
+
+#languages img {
     width: 5vw;
+    transition: all 0.3s ease;
+    transform: rotate(-30deg);
+}
+
+#languages img:hover {
+    transform: rotate(-30deg) scale(1.2);
+    filter: drop-shadow(0 0 10px var(--accent-highlight));
+}
+
+/* Offset every other row */
+#languages img:nth-child(2n) {
+    transform: rotate(-30deg) translateY(2rem);
+}
+
+#languages img:nth-child(2n):hover {
+    transform: rotate(-30deg) translateY(2rem) scale(1.2);
 }
 
 
