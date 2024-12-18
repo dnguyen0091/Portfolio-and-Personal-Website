@@ -49,15 +49,15 @@ function createNav(navCont)
     about.href= '#';
     about.textContent = 'About';
     
-    // about.addEventListener('click', (e) => {
-    //     e.preventDefault(); // Prevent default anchor behavior
-    //     const targetElement = document.getElementById('main-content'); // Use ID instead of class
-    //     if (targetElement) {
-    //         targetElement.scrollIntoView({ 
-    //             behavior: 'smooth'
-    //         });
-    //     }
-    // });
+    about.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default anchor behavior
+        const targetElement = document.getElementsByClassName('body')[0]; // Get first element with class 'body'
+        if (targetElement) {
+            targetElement.scrollIntoView({ 
+                behavior: 'smooth'
+            });
+        }
+    });
     nav.appendChild(about);
 
 
