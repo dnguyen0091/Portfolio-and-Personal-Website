@@ -26,22 +26,15 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    overflow-y: auto; /* Enable scrolling */
     background-color: var(--background-secondary);
 }
 
 #root {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Ensure the root container takes up the full height */
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow-y: auto; /* Enable scrolling */
 }
 
 a {
@@ -106,13 +99,16 @@ a:hover::after {
 /* ----------------------------------------------------------------------------- */
 /*--------------------------- HEADER ------------------------------------------*/
 .header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
-    justify-content: flex-end; /* Align items to right side */
+    justify-content: flex-end;
     align-items: center;
     background-color: var(--background-primary);
     padding: 10px 20px;
-
-    
+    box-sizing: border-box;
 }
 
 .nav-links {
