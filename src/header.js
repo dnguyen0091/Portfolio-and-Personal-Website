@@ -69,8 +69,18 @@ function createNav(navCont)
 
     //list item for the contact page
     const contact = document.createElement('a');
-    contact.href= 'https://www.linkedin.com/in/dnguyen0091/';
+    contact.href= '#';
     contact.textContent = 'Contact';
+
+    contact.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default anchor behavior
+        const targetElement = document.getElementsByClassName('contact')[0]; // Get first element with class 'contact'
+        if (targetElement) {
+            targetElement.scrollIntoView({ 
+                behavior: 'smooth'
+            });
+        }
+    });
     nav.appendChild(contact);
 
 
