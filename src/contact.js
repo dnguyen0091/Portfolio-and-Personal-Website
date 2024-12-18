@@ -1,6 +1,7 @@
+
 export default function contact()
 {
-    const bodyCont = document.querySelector('.body');
+    const bodyCont = document.querySelector('.contact');
 
     // Container holding all content for home screen
     const mainCont = document.createElement('div');
@@ -9,8 +10,12 @@ export default function contact()
 
     //Header
     const header = document.createElement('h1');
-    header.textContent = 'Get in touch with me!';
+    header.textContent = 'Contact';
     mainCont.appendChild(header);
+
+    const p= document.createElement('p');
+    p.textContent="Have a question or want to work together? Leave your details and I'll get back to you as soon as possible.";
+    mainCont.appendChild(p);
 
 
     // Contact Container
@@ -53,73 +58,12 @@ export default function contact()
     contactFormCont.appendChild(submit);
     
     
-
-
-    // Contact Info
-    const contactInfoCont = document.createElement('div');
-    contactInfoCont.id = 'contact-info';
-
-
-   // Email
-    const email = document.createElement('div');
-    const emailIcon = document.createElement('img');
-    emailIcon.src = './assets/email.svg';
-    emailIcon.alt = 'Email';
-    const emailText = document.createElement('a');
-    emailText.href = 'mailto:davidnguyen0091@icloud.com'; // Make it a mailto link
-    emailText.textContent = 'davidnguyen0091@icloud.com';
-
-    email.appendChild(emailIcon);
-    email.appendChild(emailText);
-    contactInfoCont.appendChild(email);
-
-    // GitHub
-    const github = document.createElement('div');
-    const githubIcon = document.createElement('img');
-    githubIcon.src = './assets/github.png';
-    githubIcon.alt = 'Github Icon';
-    const githubText = document.createElement('a');
-    githubText.href = 'https://github.com/dnguyen0091';
-    githubText.textContent = 'dnguyen0091';
-
-    github.appendChild(githubIcon);
-    github.appendChild(githubText);
-    contactInfoCont.appendChild(github);
-
-    // LinkedIn
-    const linkedin = document.createElement('div');
-    const linkedinIcon = document.createElement('img');
-    linkedinIcon.src = './assets/linkedIn.svg';
-    linkedinIcon.alt = 'LinkedIn';
-    const linkedinText = document.createElement('a');
-    linkedinText.href = 'https://www.linkedin.com/in/dnguyen0091';
-    linkedinText.textContent = 'David Nguyen';
-
-    linkedin.appendChild(linkedinIcon);
-    linkedin.appendChild(linkedinText);
-    contactInfoCont.appendChild(linkedin);
-
-
-
-    //Phone
-    const phone= document.createElement('div');
-    const phoneIcon= document.createElement('img');
-    phoneIcon.src= './assets/phone.svg';
-    phoneIcon.alt= 'Phone';
-    const phoneText= document.createElement('a');
-    phoneText.textContent= '904-844-1920';
-
-
-    phone.appendChild(phoneIcon);
-    phone.appendChild(phoneText);
-    contactInfoCont.appendChild(phone);
-    
-
-
     contactCont.appendChild(contactFormCont);
-    contactCont.appendChild(contactInfoCont);
+    
     mainCont.appendChild(contactCont);
     bodyCont.appendChild(mainCont);
 
 }
+
+
 
