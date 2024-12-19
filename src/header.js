@@ -1,6 +1,3 @@
-
-
-
 export default function Header() 
 {
     const headerCont= document.querySelector('header');
@@ -63,9 +60,19 @@ function createNav(navCont)
 
     //list item for the portfolio page
     const portfolio = document.createElement('a');
-    portfolio.href= 'https://www.linkedin.com/in/dnguyen0091/';
+    portfolio.href= '#';
     portfolio.textContent = 'Portfolio';
     nav.appendChild(portfolio);
+
+    portfolio.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default anchor behavior
+        const targetElement = document.getElementsByClassName('projects')[0]; // Get first element with class 'projects'
+        if (targetElement) {
+            targetElement.scrollIntoView({ 
+                behavior: 'smooth'
+            });
+        }
+    });
 
     //list item for the contact page
     const contact = document.createElement('a');
