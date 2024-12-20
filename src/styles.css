@@ -1,466 +1,52 @@
-:root {
-    /* Background Colors */
-    --background-primary: #1E1E1E; /* Main background */
-    --background-secondary: #2C2C2C; /* Chat bubbles, cards, etc. */
-
-    /* Text Colors */
-    --text-primary: #EAEAEA; /* Main text */
-    --text-secondary: #B0B0B0; /* Secondary text, timestamps */
-
-    /* Accent Colors */
-    --accent-link: #10A7E2; /* Links and interactive elements */
-    --accent-highlight: #19C37D; /* Buttons or highlighted states */
-
-    /* Borders and Shadows */
-    --border-color: #3A3A3A; /* Element outlines or separators */
-
-    --input-background: #2C2C2C;
-    --input-border: #3A3A3A;
-    --input-border-focus: #10A7E2;
-    --input-text: #EAEAEA;
-    --input-placeholder: #B0B0B0;
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
+#mainContentContact {
     display: flex;
     flex-direction: column;
-    overflow-y: auto; /* Enable scrolling */
-    overflow-x: hidden;
-    background-color: var(--background-primary);
-}
-
-#root {
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    overflow-y: auto; /* Enable scrolling */
-}
-
-
-
-
-
-/* ---------------------------INTRO-------------------------------------------- */
-
-#root {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     color: var(--text-primary);
-    position: relative;
-    overflow-x: hidden;
-}
-
-#introText1, #introText2 {
-    margin: 0.5rem 0; /* Reduce the margin between the elements */
-}
-
-#introText1 {
-    font-size: 4rem;
-    text-align: center; /* Center-align the text */
-}
-
-#introText2 {
-    font-size: 6rem;
-    text-align: center; /* Center-align the text */
-}
-#viewWorkButton {
-    width:11vw;
-    height: auto;
-
-    display:flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: var(--background-primary);
-    color: var(--accent-highlight);
-    border: 2px solid var(--accent-highlight);
-    padding: 1rem;
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Added transform and color to transition */
-    font-size: 2rem;
-    cursor: pointer;
-    border-radius: 5px; /* Added border-radius for rounded corners */
-}
-
-#viewWorkButton:hover {
-    background-color: var(--accent-highlight);
-    color: var(--text-primary);
-    transform: scale(1.1); /* Added scale effect for zoom-in */
-}
-
-#viewWorkButton img
-{
-    width: 1vw;
-    height: auto;
-    margin-left: 1rem;
-}
-
-
-/* ----------------------------------------------------------------------------- */
-/*--------------------------- HEADER ------------------------------------------*/
-.header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    height: 10vh;
-    z-index: 1000;
-    
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: var(--background-secondary);
-    padding: 10px 20px;
-    box-sizing: border-box;
-}
-
-.navLinks {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    padding-right: 20px;
-}
-
-.navLinks a {
-    font-size: 2rem;
-    color: var(--text-primary);
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-    color: var(--text-primary);
-
-    transition:color 0.3s ease;
-}
-
-.navLinks a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: var(--accent-highlight); /* Adjust the color as needed */
-    
-    transition: width 0.3s ease; /* Smooth transition for the underline */
-    position: absolute;
-    bottom: -5px; /* Position the underline just below the text */
-    left: 50%;
-    transform: translateX(-50%); /* Center the underline */
-}
-
-.navLinks a:hover {
-    color: var(--accent-highlight); /* Change font color on hover */
-}
-.navLinks a:hover::after {
-    width: 100%; /* Expand the underline to full width on hover */
-    color: var(--accent-highlight); 
-}
-/*--------------------------- BODY-ABOUT ------------------------------------------*/
-
-.body {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
-
-
-    /* Debugging Border */
-    border-color: black;
-    border-width: 1px;
-    border-style: solid;
-
-    min-height: 100vh;
-}
-
-#main-content {
-    display: flex;
-    flex-direction: column;
-    width:50vw;
     padding: 5vh;
-    align-items: center;
-    /* gap: 15vw;*/
-
+    width: 100%;
 }
 
-#main-content p
-{
-    text-align: justify;
-    width:25vw;
-    color: var(--text-primary);
-}
-
-#languages {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    padding: 2rem;
-    width:50vw;
-    justify-items: center;
-    transform: rotate(30deg);
-}
-
-#languages img {
-    width: 5vw;
-    transition: all 0.3s ease;
-    transform: rotate(-30deg);
-}
-
-#languages img:hover {
-    transform: rotate(-30deg) scale(1.2);
-    filter: drop-shadow(0 0 10px var(--accent-highlight));
-}
-
-/* Offset every other row */
-#languages img:nth-child(2n) {
-    transform: rotate(-30deg) translateY(2rem);
-}
-
-#languages img:nth-child(2n):hover {
-    transform: rotate(-30deg) translateY(2rem) scale(1.2);
-}
-
-/* -----------------------------------BODY-PROJECTS--------------------------- */
-.projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 2rem;
-    overflow: hidden;
-
-    color: var(--text-primary);
-}
-
-.carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#mainContentContact p {
     width: 50%;
-    position: relative;
-    height: 400px;
-}
-
-.carousel-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    height: 100%;
-
-}
-
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    border: none;
-    /* color: white; */
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 10;
-    
-    background-color: var(--background-primary);
-    
-}
-
-.carousel-button img {
-    width: 5rem;
-    height: 5rem;
-}
-
-.left-button {
-    left: 10px;
-}
-
-.right-button {
-    right: 10px;
-}
-
-.projectCard {
-    position: absolute;
-    width: 15vw;
-    height: 20vh;
-    border-radius: 15px;
-    transition: all 0.5s ease;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 1.5rem;
     text-align: center;
+    margin: 1rem 0;
 }
 
-.projectCard.left {
-    transform: translateX(-100%) scale(0.8);
-    opacity: 0.7;
-}
-
-.projectCard.center {
-    transform: translateX(0) scale(1.2);
-    z-index: 2;
-}
-
-.projectCard.right {
-    transform: translateX(100%) scale(0.8);
-    opacity: 0.7;
-}
-
-.projectCard.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.projectCard.expanded {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 80vw;
-    height: 80vh;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-    box-shadow: 0 0 40px var(--accent-highlight);
-}
-
-.projectOverlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.8);
+#contactContainer {
+    width: 50%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
 }
 
-.projectCard.expanded .projectOverlay {
-    opacity: 1;
-}
-/* ---------------------------------------------------------------------------- */
-
-/* -----------------------------------BODY-CONTACT ----------------------------*/
-
-#main-content-contact {
+#contactForm {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--accent-highlight);
+    background: var(--background-primary);
     color: var(--text-primary);
-    padding: 5vh;
-}
-
-#contact-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 15vw;
-}
-
-
-
-#contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
-    width: 100%; /* Ensure the form takes up the full width of its container */
-    
-}
-
-
-textarea {
-    resize: none; /* Prevent user resizing */
-    width: 100%; /* Match width of other form elements */
-    height: 150px; /* Fixed height */
-    background-color: var(--input-background);
-    color: var(--input-text);
-    border: 1px solid var(--input-border);
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1rem;
-    outline: none;
-}
-
-input, textarea {
-    background-color: var(--input-background);
-    color: var(--input-text);
-    border: 1px solid var(--input-border);
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1rem;
-    outline: none;
-    width: 100%; /* Ensure inputs take up the full width of the form */
-}
-
-input::placeholder, textarea::placeholder {
-    color: var(--input-placeholder);
-}
-
-input:focus, textarea:focus {
-    border-color: var(--input-border-focus);
 }
 
 #submit {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--background-primary);
+    color: var(--accent-highlight);
+    border: 2px solid var(--accent-highlight);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#submit:hover {
     background-color: var(--accent-highlight);
     color: var(--text-primary);
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    width: 100%; /* Ensure the button takes up the full width of the form */
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-/* ---------------------------------FOOTER-------------------------------------- */
-
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    background-color: var(--background-secondary);
-    color: var(--text-primary);
-
-    min-height:10vh;
-    margin-top: auto;
-    
-}
-
-#contact-info-footer img {
-    width: 2rem;
-    height: auto;
-    padding: 5px;
-    transition: all 0.3s ease;
-}
-
-#contact-info-footer a {
-    transition: all 0.3s ease;
-}
-
-#contact-info-footer a:hover {
-    transform: translateY(-5px);
-}
-
-#contact-info-footer a:hover img {
-    filter: drop-shadow(0 0 10px var(--accent-highlight));
-    transform: scale(1.1);
-}
-
-#contact-info-footer {
-    display: flex;
-    gap: 2rem;
-    padding: 1rem;
 }
