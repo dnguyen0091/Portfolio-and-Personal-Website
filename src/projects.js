@@ -11,7 +11,11 @@ export default function Projects() {
 
     const leftButton = document.createElement('button');
     leftButton.className = 'carousel-button left-button';
-    leftButton.innerHTML = '&lt;';
+    const leftIcon = document.createElement('img');
+    leftIcon.src='./assets/projectAssets/left.svg';
+    leftIcon.alt='left';
+
+    leftButton.appendChild(leftIcon);
     carousel.appendChild(leftButton);
 
     const carouselContent = document.createElement('div');
@@ -20,7 +24,11 @@ export default function Projects() {
 
     const rightButton = document.createElement('button');
     rightButton.className = 'carousel-button right-button';
-    rightButton.innerHTML = '&gt;';
+    const rightIcon = document.createElement('img');
+    rightIcon.src='./assets/projectAssets/right.svg';
+    rightIcon.alt='right';
+
+    rightButton.appendChild(rightIcon);
     carousel.appendChild(rightButton);
 
     const projectList = [
