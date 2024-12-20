@@ -225,6 +225,14 @@ a:hover::after {
     font-size: 2rem;
     cursor: pointer;
     z-index: 10;
+    
+    background-color: var(--background-primary);
+    
+}
+
+.carousel-button img {
+    width: 5rem;
+    height: 5rem;
 }
 
 .left-button {
