@@ -4,10 +4,25 @@ export default function intro()
     const introCont = document.createElement('div');
 
     // Basic intro placeholder
-    const introText1 = document.createElement('h2');
-    introText1.textContent = 'Hello, my name is David.';
-    const introText2 = document.createElement('h1');
-    introText2.textContent = 'I am a Full Stack Developer.';
+    const introText1 = document.createElement('p');
+    introText1.textContent = "Hello, I'm ";
+    introText1.id = 'introText1';
+
+    const highlightedText = document.createElement('span');
+    highlightedText.style.fontWeight = 'bold';
+    highlightedText.textContent = 'David Nguyen';
+    highlightedText.style.color = '#19C37D';
+
+    const period= document.createElement('span');
+    period.textContent = '.';
+    period.style.color = '#EAEAEA';
+    highlightedText.appendChild(period);
+
+    introText1.appendChild(highlightedText);
+
+    const introText2 = document.createElement('p');
+    introText2.id = 'introText2';
+    introText2.textContent = "I'm a Full Stack Developer.";
     introCont.appendChild(introText1);
     introCont.appendChild(introText2);
 
@@ -27,6 +42,16 @@ export default function intro()
     const icon= document.createElement('img');
     icon.src = './assets/downArrow.svg';
     icon.alt = 'Down Arrow';
+
+    button.addEventListener('mouseover', () => {
+        icon.src='./assets/downArrowHover.svg';
+    });
+
+    button.addEventListener('mouseout', () => {
+        icon.src='./assets/downArrow.svg';
+    });
+
+
     button.appendChild(icon);
     root.appendChild(introCont);
     root.appendChild(button);
