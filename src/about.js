@@ -27,21 +27,32 @@ export default function about()
 
     // Array of language objects
     const languageIcons = [
-        { src: 'assets/js.svg', alt: 'JavaScript' },
-        { src: 'assets/react.svg', alt: 'React' },
-        { src: 'assets/python.svg', alt: 'Python' },
-        { src: 'assets/java.svg', alt: 'Java' },
-        { src: 'assets/css.svg', alt: 'CSS' },
-        { src: 'assets/c.svg', alt: 'C' },
-        { src: 'assets/pytorch.svg', alt: 'PyTorch' }
+        { src: 'assets/techStack/js.svg',language:'JAVASCRIPT', alt: 'JavaScript' },
+        { src: 'assets/techStack/react.svg',language:'REACT', alt: 'React' },
+        { src: 'assets/techStack/python.svg',language:'PYTHON', alt: 'Python' },
+        { src: 'assets/techStack/java.svg',language:'JAVA', alt: 'Java' },
+        { src: 'assets/techStack/css.svg',language:'CSS', alt: 'CSS' },
+        { src: 'assets/techStack/c.png',language:"C", alt: 'C' },
+        { src: 'assets/techStack/git.svg',language:'GIT', alt: 'git' },
+        { src: 'assets/techStack/vim.svg',language:'VIM', alt: 'vim' },
+        { src: 'assets/techStack/vscode.svg',language:'VSCODE', alt: 'vscode' },
     ];
 
     // Create and append icons
-    languageIcons.forEach(({ src, alt }) => {
+    languageIcons.forEach(({ src, language, alt }) => {
+        const container = document.createElement('div');
+        container.className = 'languageContainer';
+    
         const img = document.createElement('img');
         img.src = src;
         img.alt = alt;
-        languages.appendChild(img);
+        
+        const p = document.createElement('p');
+        p.textContent = language;
+        
+        container.appendChild(img);
+        container.appendChild(p);
+        languages.appendChild(container);
     });
 
     bodyCont.appendChild(mainCont);
