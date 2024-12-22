@@ -29,6 +29,7 @@ html, body {
     overflow-y: auto; /* Enable scrolling */
     overflow-x: hidden;
     background-color: var(--background-primary);
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
 #root {
@@ -162,38 +163,59 @@ html, body {
 
 .body {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center; /* Changed from space-between */
-    gap: 1vw; /* Reduced from 2vw */
+    gap: 2rem;
     min-height: 100vh;
+    padding: 2rem;
 }
 
-#main-content {
+.body h1 {
+    position: relative; /* Add this line */
+    margin-top: 10vh;
+    font-size: 3.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.body h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent-highlight), transparent);
+    transform: scaleX(1.5);
+    transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /* Center content vertically */
+    gap:1vw; /* Reduced gap */
+    width: 65%;
+    flex-grow: 1; /* Ensure it takes up available space */
+}
+
+#aboutContent {
     display: flex;
     flex-direction: column;
-    width: 50vw;
-    padding: 1vh; /* Reduced from 2vh */
     align-items: center;
-}
-
-#main-content p
-{
-    text-align: justify;
-    width:25vw;
+    gap: 2rem;
+    width: 40%;
     color: var(--text-primary);
-    font-size:2rem;
+    font-size: 25px;
 }
-
-
-
 
 #languages {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    width: 400px;
-    margin: 1rem auto;
+    gap: 2rem;
+    width: 40%;
 }
 
 .languageContainer {
@@ -241,10 +263,25 @@ html, body {
 
 .projects h1 {
     position: absolute;
-    top: 15rem;
+    top: 5rem;
     margin: 0;
-    font-size: 3rem;
+    font-size: 3.5rem;
+    color: var(--text-primary);
+    position: relative;
+    padding-bottom: 0.5rem;
 }
+
+.projects h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent-highlight), transparent);
+    transform: scaleX(1.5);
+}
+
 
 .carousel {
     position: absolute;
@@ -383,7 +420,23 @@ html, body {
 }
 
 #mainContentContact h1 {
-    margin: 2vh; /* Remove default heading margin */
+    position: relative;
+    margin: 2vh;
+    font-size: 3.5rem;
+    color: var(--text-primary);
+    padding-bottom: 0.5rem;
+}
+
+#mainContentContact h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent-highlight), transparent);
+    transform: scaleX(1.5);
+    
 }
 
 #contactContainer {
