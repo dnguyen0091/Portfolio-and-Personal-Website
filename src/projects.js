@@ -32,10 +32,11 @@ export default function Projects() {
     carousel.appendChild(rightButton);
 
     const projectList = [
-        { title: 'Dragon of Dojima AI', description: 'Description for Dragon of Dojima AI', imgSrc: 'https://via.placeholder.com/150', alt: 'Kiryu' },
-        { title: 'Weather Forecast', description: 'Description for Weather Forecast', imgSrc: 'https://via.placeholder.com/150', alt: 'WeatherApp' },
-        { title: 'Shogi', description: 'Description for Shogi', imgSrc: 'https://via.placeholder.com/150', alt: 'ShogiApp' },
-        { title: 'EtchASketch', description: 'Description for EtchASketch', imgSrc: 'https://via.placeholder.com/150', alt: 'EtchASketch' },
+        { title: 'Dragon of Dojima AI', description: 'Mistral7B finetuned off of game dialogue to mimic game character Kiryu Kazuma. This model was built with PyTorch and trained using a GPU instance from BrevDev.', imgSrc: '/assets/projectAssets/kiryu.png', alt: 'Kiryu' },
+        { title: 'Weather Forecast', description: 'Worldwide weather application built using JavaScript,HTML/CSS with the VisualCrossingAPI', imgSrc: '/assets/projectAssets/WeatherReport.png', alt: 'WeatherApp' },
+        { title: 'Shogi', description: 'Recreated Japanese game Shogi using Python and Tkinter', imgSrc: '/assets/projectAssets/Shogi.png', alt: 'ShogiApp' },
+        // { title: 'EtchASketch', description: 'Pixelart tool made with JavaScript.', imgSrc: '/assets/projectAssets/RockPaperScissors.png', alt: 'EtchASketch' },
+        { title: 'Rock Paper Scissors', description: 'Rock Paper Scissors game made with JavaScript.', imgSrc: '/assets/projectAssets/RockPaperScissors.png', alt: 'RockPaperScissors' },
     ];
 
     projectList.forEach((project, index) => {
