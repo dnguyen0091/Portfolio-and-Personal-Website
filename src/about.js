@@ -19,8 +19,9 @@ export default function about() {
 
     // Profile picture
     const profileImg = document.createElement('img');
-    profileImg.src = 'https://via.placeholder.com/300';
+    profileImg.src = '/assets/headShot.jpg';
     profileImg.alt = 'Profile Picture';
+    profileImg.id = 'profileImg';
     aboutCont.appendChild(profileImg);
 
     // Profile description

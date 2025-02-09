@@ -1,3 +1,6 @@
+
+
+
 export default function Header() 
 {
     const headerCont= document.querySelector('header');
@@ -23,7 +26,7 @@ function createNav(navCont)
 
     // create a list that stores navigation links
     const nav = document.createElement('ul');
-    nav.classList.add('nav-links');
+    nav.classList.add('navLinks');
     //list item for the home page
     const home = document.createElement('a');
     

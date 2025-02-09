@@ -5,7 +5,7 @@ export default function contact()
 
     // Container holding all content for home screen
     const mainCont = document.createElement('div');
-    mainCont.id = 'main-content-contact';
+    mainCont.id = 'mainContentContact';
     
 
     //Header
@@ -21,11 +21,11 @@ export default function contact()
     // Contact Container
     const contactCont = document.createElement('div');
     
-    contactCont.id = 'contact-container';
+    contactCont.id = 'contactContainer';
 
     //Contact Form
     const contactFormCont = document.createElement('div');
-    contactFormCont.id = 'contact-form';
+    contactFormCont.id = 'contactForm';
 
 
     //Name
@@ -60,7 +60,4 @@ export default function contact()
     bodyCont.appendChild(mainCont);
 
 }
-
-
-
 
